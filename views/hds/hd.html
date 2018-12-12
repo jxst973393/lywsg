@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Site Properties -->
+    <title>洛阳微时光官网</title>
+    <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/button.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/list.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../dist/components/transition.css">
+    <link rel="stylesheet" href="../dist/components/holiday.css" media="screen, print" />
+    <link rel="stylesheet" href="../dist/components/holiday.css" media="screen, print" />
+    <link rel="stylesheet" href="../dist/components/refurbished.css" media="screen, print" />
+    <link rel="stylesheet" href="../dist/components/merch-tools.css" media="screen, print" />
+    <link rel="stylesheet" href="../dist/components/refurb.css" media="screen, print" />
+    <link rel="stylesheet" href="../dist/components/external.css" media="screen, print" />
+    <style type="text/css">
+    .yangshi {
+        text-decoration: none;
+    }
+
+    .hidden.menu {
+        display: none;
+    }
+
+    .masthead.segment {
+        min-height: 700px;
+        padding: 1em 0em;
+    }
+
+    .masthead .logo.item img {
+        margin-right: 1em;
+    }
+
+    .masthead .ui.menu .ui.button {
+        margin-left: 0.5em;
+    }
+
+    .masthead h1.ui.header {
+        margin-top: 3em;
+        margin-bottom: 0em;
+        font-size: 4em;
+        font-weight: normal;
+    }
+
+    .masthead h2 {
+        font-size: 1.7em;
+        font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+        padding: 8em 0em;
+    }
+
+    .ui.vertical.stripe h3 {
+        font-size: 2em;
+    }
+
+    .ui.vertical.stripe .button+h3,
+    .ui.vertical.stripe p+h3 {
+        margin-top: 3em;
+    }
+
+    .ui.vertical.stripe .floated.image {
+        clear: both;
+    }
+
+    .ui.vertical.stripe p {
+        font-size: 1.33em;
+    }
+
+    .ui.vertical.stripe .horizontal.divider {
+        margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+        padding: 0em;
+    }
+
+    .quote.stripe.segment .grid .column {
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
+
+    .footer.segment {
+        padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+        display: none;
+    }
+
+
+     @media only screen and (max-width:1024px) {
+            .as-producttile {
+                right: 5%;
+            }
+
+
+          }
+
+    @media only screen and (max-width: 414px) {
+        .ui.fixed.menu {
+            display: none !important;
+        }
+
+        .secondary.pointing.menu .item,
+        .secondary.pointing.menu .menu {
+            display: none;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: block;
+        }
+
+        .masthead.segment {
+            min-height: 350px;
+        }
+
+        .masthead h1.ui.header {
+            font-size: 2em;
+            margin-top: 1.5em;
+        }
+
+        .masthead h2 {
+            margin-top: 0.5em;
+            font-size: 1.5em;
+        }
+
+        .as-producttiles {
+            display: block;
+            /*right: 20%;*/
+        }
+
+        .as-producttile {
+          right: 1%;
+        }
+
+        @media only screen and (max-width:375px) {
+            .as-producttile {
+                right: 2%;
+            }
+
+            .as-producttiles {
+                display: block;
+                /*right: 20%;*/
+
+            }
+        }
+
+        @media only screen and (max-width:320px) {
+            .as-producttile {
+                right: 5%;
+            }
+
+            .as-producttiles {
+                display: block;
+            }
+        }
+      
+
+    }
+    </style>
+    <!-- </style> -->
+    <script src="../dist/components/jquery.min.js"></script>
+    <script src="../dist/components/visibility.js"></script>
+    <script src="../dist/components/sidebar.js"></script>
+    <script src="../dist/components/transition.js"></script>
+    <script>
+    $(document)
+        .ready(function() {
+
+            // fix menu when passed
+            // $('.masthead')
+            //     .visibility({
+            //         once: false,
+            //         onBottomPassed: function() {
+            //             $('.fixed.menu').transition('fade in');
+            //         },
+            //         onBottomPassedReverse: function() {
+            //             $('.fixed.menu').transition('fade out');
+            //         }
+            //     });
+
+            // create sidebar and attach to menu open
+            $('.ui.sidebar')
+                .sidebar('attach events', '.toc.item');
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Following Menu -->
+    <!-- <div class="ui large top fixed  menu"> -->
+    <div class="ui large top  fixed menu" style="background-color: black;">
+        <div class="ui container">
+            <a class="item" href="/">洛阳微时光</a>
+            <a class="item" href="/hds/hd">策划案例</a>
+            <a class="item" href="#ct1">公众号活动</a>
+            <a class="item" href="https://weibo.com/u/1659411235">微博</a>
+            <!-- <a class="item">活动一览</a> -->
+            <div class="right menu">
+                <!--    <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <a class="item" href="/">洛阳微时光</a>
+        <a class="item" href="/hds/hd">策划案例</a>
+        <a class="item" href="#ct1">公众号活动</a>
+        <a class="item" href="https://weibo.com/u/1659411235">微博</a>
+        <!-- <a class="item">活动一览</a> -->
+        <!--   <a class="item">Login</a>
+  <a class="item">Signup</a> -->
+    </div>
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui inverted vertical masthead center aligned " style="background-color: black;">
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu" style="border: none;">
+                    <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+                    <!--  <a class="active item">洛阳微时光</a>
+        <a class="item">后台</a>
+        <a class="item">公众号活动</a>
+        <a class="item">微博</a> -->
+                </div>
+            </div>
+            <div class="as-l-fullwidth" style="-webkit-animation: introInfo 0.75s 0.25s ease-out both;
+  animation: introInfo 0.75s 0.25s ease-out both;">
+                <div class="rs-refurbished-featured"><h2 class="rs-refurbished-header"><%=title%></h2>
+                    <div class="rs-refurbished-products">
+                        <ul data-template="" class="as-gridpage-producttiles as-producttiles pinwheel">
+                            <% for(var item in lists) { %>
+                            <li data-trigger-click="click [data-relatedlink='producttile-0']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1541713941862" aria-hidden="true" src="<%= lists[item].get('image') %>" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-0" data-evar11="FPXT2|pinwheel" data-feature-name="Refurb" data-display-name="" data-part-number="FPXT2" data-base-part-number="FPXT2" data-customer-commit-string="8 business days" href="/cn/shop/product/FPXT2?fnode=f15170a96c2a8bd668c57a1d0921dccd1554d4e7480a48e085264a7fa88d514a0f11c9ece45fcb149b7f44baeedaab25797126e6f29c55c8519a0379569eb69f555f8332bc081e7b294f9eb4086826ac" class="as-producttile-tilelink">                                                <%= lists[item].get('name') %>
+</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice">时间
+                                        <%=lists[item].get('time')%>
+                                    </div></br>
+                                    <span class="as-price-previousprice"><span class="was-text"></span> </span><span class="as-producttile-savingsprice" style="color: #666666;">地址
+                            <%=lists[item].get('dizhi')%> </span>
+                                    <!--               <div class="as-price-currentprice as-producttile-currentprice" style="color:#666666;">地址
+                            <%=lists[item].get('dizhi')%>
+                        </div> -->
+                            </li>
+                            <% } %>
+                            
+                            <li data-trigger-click="click [data-relatedlink='producttile-1']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1500414230672" aria-hidden="true" src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/6b/61/0d/6b610d15-1f43-3d48-3033-65ab39590ade/AppIcon-0-85-220-0-0-0-0-4-0-0-0-2x-sRGB-0-0-0.png/690x0w.png" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-1" data-evar11="FNYK2|pinwheel" data-feature-name="Refurb" data-display-name="翻新 12 英寸 MacBook 1.2GHz 双核 Intel Core m3 - 金色" data-part-number="FNYK2" data-base-part-number="FNYK2" data-customer-commit-string="8 business days" href="" class="as-producttile-tilelink">XX 地产 PPT </a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice"> </div><span class="as-price-previousprice"><span class="was-text"></span>  </span><span class="as-producttile-savingsprice"></span>
+                            </li>
+
+                                  <li data-trigger-click="click [data-relatedlink='producttile-1']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1500414230672" aria-hidden="true" src="http://lc-TK0L23h1.cn-n1.lcfile.com/ed8945bec76e4f3dbd7f.jpg" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-1" data-evar11="FNYK2|pinwheel" data-feature-name="Refurb" data-display-name="翻新 12 英寸 MacBook 1.2GHz 双核 Intel Core m3 - 金色" data-part-number="FNYK2" data-base-part-number="FNYK2" data-customer-commit-string="8 business days" href="" class="as-producttile-tilelink">万安山老虎活动</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice"> </div><span class="as-price-previousprice"><span class="was-text"></span>  </span><span class="as-producttile-savingsprice"></span>
+                            </li>
+                           <!--  <li data-trigger-click="click [data-relatedlink='producttile-2']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1500414275316" aria-hidden="true" src="https://store.storeimages.cdn-apple.com/8755/as-images.apple.cohttps://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/6b/61/0d/6b610d15-1f43-3d48-3033-65ab39590ade/AppIcon-0-85-220-0-0-0-0-4-0-0-0-2x-sRGB-0-0-0.png/690x0w.pngm/is/image/AppleInc/aos/published/images/r/ef/refurb/2017/refurb-2017-macbook-silver-gallery?wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1500414275316" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-2" data-evar11="FNYH2|pinwheel" data-feature-name="Refurb" data-display-name="翻新 12 英寸 MacBook 1.2GHz 双核 Intel Core m3 - 银色" data-part-number="FNYH2" data-base-part-number="FNYH2" data-customer-commit-string="8 business days" href="/cn/shop/product/FNYH2?fnode=f15170a96c2a8bd668c57a1d0921dccd1554d4e7480a48e085264a7fa88d514a0f11c9ece45fcb149b7f44baeedaab25797126e6f29c55c8519a0379569eb69f555f8332bc081e7b294f9eb4086826ac" class="as-producttile-tilelink">翻新 12 英寸 MacBook 1.2GHz 双核 Intel Core m3 - 银色</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice">RMB 8,623</div><span class="as-price-previousprice"><span class="was-text">原价</span> RMB 10,200</span><span class="as-producttile-savingsprice"> 节省 RMB 1,577</span>
+                            </li>
+                            <li data-trigger-click="click [data-relatedlink='producttile-3']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1543342322059" aria-hidden="true" src="https://store.storeimages.cdn-apple.com/8755/as-images.apple.com/is/image/AppleInc/aos/published/images/r/fb/rfb/2013ipadmini/rfb-2013ipadmini-wifi-silver?wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1543342322059" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-3" data-evar11="FE280|pinwheel" data-feature-name="Refurb" data-display-name="翻新 iPad mini 2 无线局域网机型 32GB - 银色" data-part-number="FE280" data-base-part-number="FE280" data-customer-commit-string="8 business days" href="/cn/shop/product/FE280?fnode=f15170a96c2a8bd668c57a1d0921dccd1554d4e7480a48e085264a7fa88d514a0f11c9ece45fcb149b7f44baeedaab25797126e6f29c55c8519a0379569eb69f555f8332bc081e7b294f9eb4086826ac" class="as-producttile-tilelink">翻新 iPad mini 2 无线局域网机型 32GB - 银色</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice">RMB 1,673</div>
+                            </li>
+                            <li data-trigger-click="click [data-relatedlink='producttile-4']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1543279799835" aria-hidden="true" src="https://store.storeimages.cdn-apple.com/8755/as-images.apple.com/is/image/AppleInc/aos/published/images/r/fb/rfb/ipad/rfb-ipad-mini4-gold-wifi-2015?wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1543279799835" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-4" data-evar11="FNY32|pinwheel" data-feature-name="Refurb" data-display-name="翻新 iPad mini 4 无线局域网机型 A1538 32GB - 金色" data-part-number="FNY32" data-base-part-number="FNY32" data-customer-commit-string="8 business days" href="/cn/shop/product/FNY32?fnode=f15170a96c2a8bd668c57a1d0921dccd1554d4e7480a48e085264a7fa88d514a0f11c9ece45fcb149b7f44baeedaab25797126e6f29c55c8519a0379569eb69f555f8332bc081e7b294f9eb4086826ac" class="as-producttile-tilelink">翻新 iPad mini 4 无线局域网机型 A1538 32GB - 金色</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice">RMB 2,357</div>
+                            </li>
+                            <li data-trigger-click="click [data-relatedlink='producttile-5']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1543279799835" aria-hidden="true" src="https://store.storeimages.cdn-apple.com/8755/as-images.apple.com/is/image/AppleInc/aos/published/images/r/fb/rfb/ipad/rfb-ipad-mini4-gold-wifi-2015?wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1543279799835" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-5" data-evar11="FK9Q2|pinwheel" data-feature-name="Refurb" data-display-name="翻新 iPad mini 4 无线局域网机型 A1538 128GB - 金色" data-part-number="FK9Q2" data-base-part-number="FK9Q2" data-customer-commit-string="8 business days" href="/cn/shop/product/FK9Q2?fnode=f15170a96c2a8bd668c57a1d0921dccd1554d4e7480a48e085264a7fa88d514a0f11c9ece45fcb149b7f44baeedaab25797126e6f29c55c8519a0379569eb69f555f8332bc081e7b294f9eb4086826ac" class="as-producttile-tilelink">翻新 iPad mini 4 无线局域网机型 A1538 128GB - 金色</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice">RMB 2,764</div>
+                            </li>
+                            <li data-trigger-click="click [data-relatedlink='producttile-6']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1542160029963" aria-hidden="true" src="https://store.storeimages.cdn-apple.com/8755/as-images.apple.com/is/image/AppleInc/aos/published/images/r/fb/rfb/97/rfb-97-ipad-pro-spacegray-cellular-2015?wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1542160029963" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-6" data-evar11="FM6N2|pinwheel" data-feature-name="Refurb" data-display-name="翻新 9.7 英寸 iPad Pro 无线局域网 + 蜂窝网络机型 A1675 32GB - 深空灰色" data-part-number="FM6N2" data-base-part-number="FM6N2" data-customer-commit-string="8 business days" href="/cn/shop/product/FM6N2?fnode=f15170a96c2a8bd668c57a1d0921dccd1554d4e7480a48e085264a7fa88d514a0f11c9ece45fcb149b7f44baeedaab25797126e6f29c55c8519a0379569eb69f555f8332bc081e7b294f9eb4086826ac" class="as-producttile-tilelink">翻新 9.7 英寸 iPad Pro 无线局域网 + 蜂窝网络机型 A1675 32GB - 深空灰色</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice">RMB 4,538</div>
+                            </li>
+                            <li data-trigger-click="click [data-relatedlink='producttile-7']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1543342322059" aria-hidden="true" src="https://store.storeimages.cdn-apple.com/8755/as-images.apple.com/is/image/AppleInc/aos/published/images/r/fb/rfb/2013ipadmini/rfb-2013ipadmini-wifi-silver?wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1543342322059" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-7" data-evar11="FE279|pinwheel" data-feature-name="Refurb" data-display-name="翻新 iPad mini 2 无线局域网机型 16GB - 银色" data-part-number="FE279" data-base-part-number="FE279" data-customer-commit-string="8 business days" href="/cn/shop/product/FE279?fnode=f15170a96c2a8bd668c57a1d0921dccd1554d4e7480a48e085264a7fa88d514a0f11c9ece45fcb149b7f44baeedaab25797126e6f29c55c8519a0379569eb69f555f8332bc081e7b294f9eb4086826ac" class="as-producttile-tilelink">翻新 iPad mini 2 无线局域网机型 16GB - 银色</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice">RMB 1,584</div>
+                            </li>
+                            <li data-trigger-click="click [data-relatedlink='producttile-8']" class="as-producttile as-util-relatedlink rr-visibilityobserver">
+                                <div class="as-producttile-tilehero"><img data-scale-params-1="wid=445&amp;hei=445&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1543279224004" aria-hidden="true" src="https://store.storeimages.cdn-apple.com/8755/as-images.apple.com/is/image/AppleInc/aos/published/images/r/fb/rfb/ipad/rfb-ipad-pro10in-rosegold-cellular-2017?wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1543279224004" width="445" height="445" alt="" class="ir as-producttile-image"></div>
+                                    <div class="as-producttile-info"><h3 class="as-producttile-title"><a data-relatedlink="producttile-8" data-evar11="FPK02|pinwheel" data-feature-name="Refurb" data-display-name="翻新 10.5 英寸 iPad Pro 无线局域网 + 蜂窝网络机型 A1852 256GB - 玫瑰金色" data-part-number="FPK02" data-base-part-number="FPK02" data-customer-commit-string="8 business days" href="/cn/shop/product/FPK02?fnode=f15170a96c2a8bd668c57a1d0921dccd1554d4e7480a48e085264a7fa88d514a0f11c9ece45fcb149b7f44baeedaab25797126e6f29c55c8519a0379569eb69f555f8332bc081e7b294f9eb4086826ac" class="as-producttile-tilelink">翻新 10.5 英寸 iPad Pro 无线局域网 + 蜂窝网络机型 A1852 256GB - 玫瑰金色</a></h3>
+                                    </div>
+                                    <div class="as-price-currentprice as-producttile-currentprice">RMB 6,333</div><span class="as-price-previousprice"><span class="was-text">原价</span> RMB 7,424</span><span class="as-producttile-savingsprice"> 节省 RMB 1,091</span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="ui inverted vertical footer segment" style="background: black;">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">关于</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://weibo.com/u/1659411235" class="item">官方微博</a>
+                        <a href="/ContactUs" class="item">联系我们</a>
+                        <!-- <a href="#" class="item">Religious Ceremonies</a>
+                    <a href="#" class="item">Gazebo Plans</a> -->
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">服务</h4>
+                    <div class="ui inverted link list">
+                        <a href="/todos" class="item">小程序后台</a>
+                        <!--  <a href="#" class="item">DNA FAQ</a>
+                    <a href="#" class="item">How To Access</a>
+                    <a href="#" class="item">Favorite X-Men</a> -->
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">公众号</h4>
+                    <p>洛阳微时光</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

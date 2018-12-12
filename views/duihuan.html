@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="/stylesheets/style2.css" rel="stylesheet">
+    <link href="/stylesheets/style-responsive2.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/stylesheets/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <!-- <link href="/stylesheets/font-awesome.css?v=4.4.0" rel="stylesheet"> -->
+    <link href="/stylesheets/custom.css" rel="stylesheet">
+    <link href="/stylesheets/animate.css" rel="stylesheet">
+    <link href="/stylesheets/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/stylesheets/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <!--right slidebar-->
+    <link href="css/slidebars.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <section id="container">
+        <!--header start-->
+        <header class="header white-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="点击出侧边栏"></div>
+            </div>
+            <!--logo start-->
+            <a href="/todos" class="logo">洛阳微时光<span>后台</span></a>
+            <!-- <img src="/stylesheets/image/king.png"> -->
+            <!--logo end-->
+            <!--search & user info start-->
+            <div class="top-nav ">
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown">
+                             <h5 class="username">管理员:<%=user.get('username')%></h5>
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li>
+                        <a class="active" href="/todos">
+                          <i class="fa fa-dashboard"></i>
+                          <span>首页</span>
+                      </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>活动列表</span>
+                      </a>
+                        <ul class="sub">
+                            <li><a  href="/todos">活动列表</a></li>
+                            <li><a  href="/duihuan">兑换列表</a></li>
+                            <li><a  href="/menpiao">门票兑换</a></li>
+                            <!-- li><a  href="mega_menu.html">Mega Menu</a></li>
+                          <li><a  href="language_switch_bar.html">Language Switch Bar</a></li>
+                          <li><a  href="email_template.html" target="_blank">Email Template</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>用户列表</span>
+                      </a>
+                        <ul class="sub">
+                            <li><a  href="/userlist">用户列表</a></li>
+                            <!-- <li><a  href="buttons.html">Buttons</a></li>
+                          <li><a  href="modal.html">Modal</a></li>
+                          <li><a  href="toastr.html">Toastr Notifications</a></li>
+                          <li><a  href="widget.html">Widget</a></li>
+                          <li><a  href="slider.html">Slider</a></li>
+                          <li><a  href="nestable.html">Nestable</a></li>
+                          <li><a  href="font_awesome.html">Font Awesome</a></li> -->
+                        </ul>
+                    </li>
+                    <!--  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Components</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="grids.html">Grids</a></li>
+                          <li><a  href="calendar.html">Calendar</a></li>
+                          <li><a  href="gallery.html">Gallery</a></li>
+                          <li><a  href="todo_list.html">Todo List</a></li>
+                          <li><a  href="draggable_portlet.html">Draggable Portlet</a></li>
+                          <li><a  href="tree.html">Tree View</a></li>
+                      </ul>
+                  </li> -->
+                    <!--   <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-tasks"></i>
+                          <span>Form Stuff</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="form_component.html">Form Components</a></li>
+                          <li><a  href="advanced_form_components.html">Advanced Components</a></li>
+                          <li><a  href="form_wizard.html">Form Wizard</a></li>
+                          <li><a  href="form_validation.html">Form Validation</a></li>
+                          <li><a  href="dropzone.html">Dropzone File Upload</a></li>
+                          <li><a  href="inline_editor.html">Inline Editor</a></li>
+                          <li><a  href="image_cropping.html">Image Cropping</a></li>
+                          <li><a  href="file_upload.html">Multiple File Upload</a></li>
+                      </ul>
+                  </li> -->
+                    <!--   <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-th"></i>
+                          <span>Data Tables</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="basic_table.html">Basic Table</a></li>
+                          <li><a  href="responsive_table.html">Responsive Table</a></li>
+                          <li><a  href="dynamic_table.html">Dynamic Table</a></li>
+                          <li><a  href="editable_table.html">Editable Table</a></li>
+                      </ul>
+                  </li> -->
+                    <!--    <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-envelope"></i>
+                          <span>Mail</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="inbox.html">Inbox</a></li>
+                          <li><a  href="inbox_details.html">Inbox Details</a></li>
+                      </ul>
+                  </li> -->
+                    <!--   <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-bar-chart-o"></i>
+                          <span>Charts</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="morris.html">Morris</a></li>
+                          <li><a  href="chartjs.html">Chartjs</a></li>
+                          <li><a  href="flot_chart.html">Flot Charts</a></li>
+                          <li><a  href="xchart.html">xChart</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-shopping-cart"></i>
+                          <span>Shop</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="product_list.html">List View</a></li>
+                          <li><a  href="product_details.html">Details View</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="google_maps.html" >
+                          <i class="fa fa-map-marker"></i>
+                          <span>Google Maps </span>
+                      </a>                 </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;">
+                          <i class="fa fa-comments-o"></i>
+                          <span>Chat Room</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="lobby.html">Lobby</a></li>
+                          <li><a  href="chat_room.html"> Chat Room</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-glass"></i>
+                          <span>Extra</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="blank.html">Blank Page</a></li>
+                          <li><a  href="sidebar_closed.html">Sidebar Closed</a></li>
+                          <li><a  href="people_directory.html">People Directory</a></li>
+                          <li><a  href="coming_soon.html">Coming Soon</a></li>
+                          <li><a  href="lock_screen.html">Lock Screen</a></li>
+                          <li><a  href="profile.html">Profile</a></li>
+                          <li><a  href="invoice.html">Invoice</a></li>
+                          <li><a  href="project_list.html">Project List</a></li>
+                          <li><a  href="project_details.html">Project Details</a></li>
+                          <li><a  href="search_result.html">Search Result</a></li>
+                          <li><a  href="pricing_table.html">Pricing Table</a></li>
+                          <li><a  href="faq.html">FAQ</a></li>
+                          <li><a  href="fb_wall.html">FB Wall</a></li>
+                          <li><a  href="404.html">404 Error</a></li>
+                          <li><a  href="500.html">500 Error</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a  href="login.html">
+                          <i class="fa fa-user"></i>
+                          <span>Login Page</span>
+                      </a>
+                  </li> -->
+                    <!--multi level menu start-->
+                    <!--       <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-sitemap"></i>
+                          <span>Multi level Menu</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="javascript:;">Menu Item 1</a></li>
+                          <li class="sub-menu">
+                              <a  href="boxed_page.html">Menu Item 2</a>
+                              <ul class="sub">
+                                  <li><a  href="javascript:;">Menu Item 2.1</a></li>
+                                  <li class="sub-menu">
+                                      <a  href="javascript:;">Menu Item 3</a>
+                                      <ul class="sub">
+                                          <li><a  href="javascript:;">Menu Item 3.1</a></li>
+                                          <li><a  href="javascript:;">Menu Item 3.2</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li> -->
+                    <!--multi level menu end-->
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar start-->
+        <aside>
+            <!--sidebar end-->
+            <!--main content start-->
+            <section id="main-content">
+                <section class="wrapper site-min-height">
+                    <!-- page start-->
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <h5><%=title %></h5>
+                        </header>
+                        <div class="panel-body">
+                            <div class="adv-table editable-table ">
+                                <!--    <div class="clearfix">
+                              <div class="btn-group">
+                              <button type="button" class="btn btn-primary">
+                                <a href="/tijiaos" style="color: white;">上传新活动</a></button>
+                              </div>
+                              <div class="btn-group pull-right">
+                                  <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                  </button>
+                              
+                              </div>
+                          </div> -->
+                                <div class="space15"></div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>活动名称</th>
+                                                <th>地址</th>
+                                                <th>时间</th>
+                                                <th>兑换人微信名称</th>
+                                                <th>兑换人电话</th>
+                                                <th>兑换验证</th>
+                                                <th>修改</th>
+                                                <th>删除</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="">
+                                                <% lists %>
+                                                <ul >
+                                                    <% for(var item in lists) { %>
+                                            <tr>
+                                                <td>
+                                                    <%= lists[item].get('name') %>
+                                                </td>
+                                                <td>
+                                                    <%= lists[item].get('dizhi') %>
+                                                </td>
+                                                <td>
+                                                    <%= lists[item].get('time') %>
+                                                </td>
+                                                <td>
+                                                    <%= lists[item].get('username') %>
+                                                </td>
+                                                <td>
+                                                    <%= lists[item].get('phonenumber') %>
+                                                </td>
+                                                <td>
+                                                    <form action='/duihuan' method='POST'>
+                                                        <button class="btn btn-warning" value='<%= item %> ' name="yanzheng" type='submit'>
+                                                            <%= lists[item].get('zzz')%> </button>
+                                                        <!-- <div id='div' style="display:none;">123123</div> -->
+                                                    </form>
+                                                </td>
+                                                <td>
+                                                    <form action='/duihuan' method='POST'>
+                                                        <a href="/duihuaneditor?id=<%= lists[item].id %>" class="btn btn-primary" role="button">编辑</a> </form>
+                                                </td>
+                                                <td>
+                                                    <form action='/duihuan' method='POST'>
+                                                        <button class="btn btn-danger" value='<%= lists[item].get("objectId") %> ' name="butt" type='submit'> 删除 </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+                                            </ul>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+          <nav aria-label="...">
+                                <ul class="pager">
+                                    <li class="previous">
+                                        <% if (page == 1) { %>
+                                        <a  onClick="AlertButton()"><span aria-hidden="true">&larr;</span> 上一页</a>
+                                        <% } %>
+                                        <% if (page > 1) { %>
+                                        <a href="/duihuan?page=<%=page-1%>" ><span aria-hidden="true">&larr;</span> 上一页</a>
+                                        <% } %>
+                                    </li>
+                                    <li>一共
+                                        <%= count %>条数据，每页显示
+                                        <%=limit%>条数据，一共
+                                        <%=pages%>页，当前第
+                                        <%=page%>页。</li>
+                                    <li class="next">
+                                        <% if (page < pages) { %>
+                                        <a href="/duihuan?page=<%=page+1%>" name="ddc" value="<%=page%>"  > 下一页 <span aria-hidden="true">&rarr;</span></a>
+                                        <% } %>
+                                        <% if (page == pages) { %>
+                                        <a  name="ddc" value="<%=page%>" type="button"  onClick="AlertButton()" > 下一页 <span aria-hidden="true">&rarr;</span></a>
+                                        <% } %>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- page end-->
+                </section>
+            </section>
+            <!--main content end-->
+            <!-- Right Slidebar start -->
+            <!-- Right Slidebar end -->
+            <!--footer start-->
+            <footer class="site-footer">
+                <div class="text-center">
+                    2018 &copy; 洛阳微时光后台
+                    <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+                </div>
+            </footer>
+            <!--footer end-->
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>
+    <script src="js/respond.min.js"></script>
+    <!--right slidebar-->
+    <script src="js/slidebars.min.js"></script>
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+    <!--script for this page only-->
+    <script src="js/editable-table.js"></script>
+    <!-- END JAVASCRIPTS -->
+    <script>
+    jQuery(document).ready(function() {
+        EditableTable.init();
+    });
+   
+    </script>
+     </script>
+    <script type="text/javascript">
+    function HomeButton() {
+        location.href = "http://localhost:8080/jsTest/1.jsp";
+    }
+
+    function AlertButton() {
+        window.alert("没有内容了");
+    }
+    </script>
+</body>
+
+</html>

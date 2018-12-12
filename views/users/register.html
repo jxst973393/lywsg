@@ -1,0 +1,99 @@
+<!-- <h1></h1>
+<div id="errMsg">
+</div>
+<form class="form-horizontal" action="/users/register" method="POST">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">用户名</label>
+    <div class="col-sm-10">
+      <input type="input" name="username" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-10">
+      <input type="password" name="password" />
+    </div>
+  </div>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>洛阳微时光后台</title>
+
+    <!-- Bootstrap core CSS -->
+      <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/style2.css" rel="stylesheet">
+    <link href="/stylesheets/style-responsive2.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="/stylesheets/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <!-- <link href="/stylesheets/font-awesome.css?v=4.4.0" rel="stylesheet"> -->
+    <link href="/stylesheets/custom.css" rel="stylesheet">
+    <link href="/stylesheets/animate.css" rel="stylesheet">
+    <link href="/stylesheets/style.css?v=4.1.0" rel="stylesheet">
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+
+    <!--right slidebar-->
+    <link href="css/slidebars.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<!--  <div class="col-sm-offset-2 col-sm-10">
+    <input class="btn btn-default" type="submit" value="注册" />
+  </div> -->
+<!-- </form> -->
+ <body class="login-body">
+
+    <div class="container">
+
+      <form class="form-signin"  action="/users/register" method="POST">
+        <h2 class="form-signin-heading">管理员注册</h2>
+        <div class="login-wrap">
+            <!-- <p>Enter your personal details below</p> -->
+            <input type="text" class="form-control" placeholder="用户名" name="username"  autofocus>
+            <input type="password" class="form-control" placeholder="密码" name="password">
+            <!-- <input type="password" class="form-control" placeholder="Re-type Password" > -->
+            <label class="checkbox">
+                <!-- <input type="checkbox" value="agree this condition"> I agree to the Terms of Service and Privacy Policy -->
+            </label>
+            <button class="btn btn-lg btn-login btn-block" type="submit" value="注册">注册</button>
+
+            <div class="registration">
+                已有账号？
+                <a class="" href="/users/login">
+                    登陆
+                </a>
+            </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+
+  </body>
+</html>
